@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Celymar Catamo | Technology Across Layers</title>
+
+    <meta name="description" content="Portafolio profesional de Celymar Catamo: desarrollo web, backend, automatización, telecomunicaciones y soporte técnico.">
+    <meta name="author" content="Celymar Catamo">
+    <meta name="theme-color" content="#101b20">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Celymar Catamo | Technology Across Layers">
+    <meta property="og:description" content="Desarrollo web, backend, automatización, telecomunicaciones y soporte técnico.">
+    <meta property="og:image" content="assets/og-preview.jpg">
+    <meta property="og:image:alt" content="Celymar Catamo — Technology Across Layers">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Celymar Catamo | Technology Across Layers">
+    <meta name="twitter:description" content="Desarrollo web, backend, automatización, telecomunicaciones y soporte técnico.">
+    <meta name="twitter:image" content="assets/og-preview.jpg">
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="background-grid"></div>
+
+    <header class="header">
+        <a href="#inicio" class="logo">
+            Celymar<span>.</span>
+        </a>
+
+        <nav class="navbar" id="navbar">
+            <a href="#inicio" class="nav-link active">Inicio</a>
+            <a href="#experiencia" class="nav-link">Experiencia</a>
+            <a href="#proyectos" class="nav-link">Proyectos</a>
+            <a href="#habilidades" class="nav-link">Habilidades</a>
+            <a href="#educacion" class="nav-link">Educación</a>
+            <a href="#contacto" class="nav-link">Contacto</a>
+        </nav>
+
+        <button type="button" class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero section" id="inicio">
+
+            <div class="hero-content">
+                <span class="section-number">01</span>
+
+                <p class="eyebrow">TECHNOLOGY ACROSS LAYERS</p>
+
+                <h1>
+                    Hola, soy
+                    <strong>Celymar<br>Catamo</strong>
+                </h1>
+
+                <p class="hero-subtitle">
+                    Tecnología, diagnóstico y desarrollo de soluciones digitales.
+                </p>
+
+                <p class="hero-description">
+                    Profesional con experiencia en telecomunicaciones, soporte técnico
+                    y desarrollo web. Actualmente estudio Computación e Informática
+                    en Cibertec, integrando experiencia práctica con nuevos conocimientos
+                    en programación y sistemas.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#experiencia" class="button button-primary">
+                        Explorar mi experiencia
+                        <span>↗</span>
+                    </a>
+
+                    <a href="#proyectos" class="button button-outline">
+                        Ver proyectos
+                    </a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat">
+                        <strong>01</strong>
+                        <span>Perfil técnico<br>multidisciplinario</span>
+                    </div>
+
+                    <div class="stat">
+                        <strong>04</strong>
+                        <span>Áreas principales<br>de experiencia</span>
+                    </div>
+
+                    <div class="stat">
+                        <strong>∞</strong>
+                        <span>Aprendizaje<br>continuo</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <button class="globe-label label-top" type="button" data-globe-work="telecom">
+                    <span class="label-dot"></span>
+                    Telecomunicaciones
+                </button>
+
+                <button class="globe-label label-right" type="button" data-globe-work="web">
+                    <span class="label-dot"></span>
+                    Desarrollo web
+                </button>
+
+                <button class="globe-label label-left" type="button" data-globe-work="support">
+                    <span class="label-dot"></span>
+                    Soporte técnico
+                </button>
+
+                <button class="globe-label label-bottom" type="button" data-globe-work="automation">
+                    <span class="label-dot"></span>
+                    Automatización
+                </button>
+
+                <div id="globe-container" aria-label="Globo 3D interactivo"></div>
+
+                <p class="globe-hint">
+                    <span>↻</span> Gira el mundo · haz clic en un punto para conocer mi trabajo
+                </p>
+            </div>
+
+            <div class="globe-work-modal" id="globeWorkModal" aria-hidden="true">
+                <div class="globe-work-backdrop" data-close-globe-work></div>
+                <div class="globe-work-dialog" role="dialog" aria-modal="true" aria-labelledby="globeWorkTitle">
+                    <button class="globe-work-close" id="globeWorkClose" type="button" aria-label="Cerrar">×</button>
+                    <div class="globe-work-kicker" id="globeWorkKicker">ÁREA</div>
+                    <h3 id="globeWorkTitle">Mi trabajo</h3>
+                    <p class="globe-work-story" id="globeWorkStory"></p>
+                    <div class="globe-work-gallery" id="globeWorkGallery"></div>
+                    <div class="globe-work-footer">
+                        <div class="globe-work-tags" id="globeWorkTags"></div>
+                        <button class="button button-primary" id="globeWorkProjects" type="button">Ver mis proyectos <span>↗</span></button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section class="section experience-section" id="experiencia">
+            <div class="section-heading">
+                <span class="section-number">02</span>
+
+                <div>
+                    <p class="eyebrow">EXPERIENCIA PROFESIONAL</p>
+                    <h2>Experiencia</h2>
+                </div>
+
+                <p class="heading-description">
+                    Soluciones en el mundo real, aplicando tecnología.
+                </p>
+            </div>
+
+            <div class="experience-grid">
+
+                <article class="experience-card professional-role-card">
+                    <div class="card-image gps-image"></div>
+                    <div class="card-content">
+                        <span class="card-index">05</span>
+                        <p class="role-period">Experiencia profesional</p>
+                        <h3>Asistente GPS</h3>
+                        <p class="role-company">Transportes HYC</p>
+                        <ul>
+                            <li>Monitoreo y seguimiento de unidades mediante plataformas GPS.</li>
+                            <li>Control de recorridos, tiempos y ubicación de vehículos.</li>
+                            <li>Registro y organización de información operativa.</li>
+                            <li>Apoyo en el seguimiento de incidencias de transporte.</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="experience-card professional-role-card">
+                    <div class="card-image maintenance-image"></div>
+                    <div class="card-content">
+                        <span class="card-index">06</span>
+                        <p class="role-period">Experiencia profesional</p>
+                        <h3>Asistente de Mantenimiento</h3>
+                        <p class="role-company">Transportes HYC</p>
+                        <ul>
+                            <li>Apoyo en la planificación y control de mantenimiento vehicular.</li>
+                            <li>Seguimiento de mantenimientos preventivos y correctivos.</li>
+                            <li>Coordinación y seguimiento de actividades de taller.</li>
+                            <li>Organización de registros, observaciones y reportes técnicos.</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="experience-card">
+                    <div class="card-image fiber-image"></div>
+                    <div class="card-content">
+                        <span class="card-index">01</span>
+                        <h3>Telecomunicaciones<br>y fibra óptica</h3>
+                        <ul>
+                            <li>Pruebas técnicas con OTDR y VFL.</li>
+                            <li>Medición de potencia y pase de luz.</li>
+                            <li>Uso de cortadora de fibra óptica.</li>
+                            <li>Medición de carretes PKP de 36 hilos.</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="experience-card">
+                    <div class="card-image network-image"></div>
+                    <div class="card-content">
+                        <span class="card-index">02</span>
+                        <h3>Redes y<br>equipos</h3>
+                        <ul>
+                            <li>Módems HFC y cable módems.</li>
+                            <li>Configuración de decodificadores.</li>
+                            <li>Diagnóstico de conectividad.</li>
+                            <li>Validación de dispositivos.</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="experience-card">
+                    <div class="card-image support-image"></div>
+                    <div class="card-content">
+                        <span class="card-index">03</span>
+                        <h3>Soporte<br>técnico</h3>
+                        <ul>
+                            <li>Actualización de teléfonos móviles.</li>
+                            <li>Instalación y actualización de software.</li>
+                            <li>Configuración de dispositivos.</li>
+                            <li>Resolución de incidencias.</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="experience-card">
+                    <div class="card-image code-image"><img src="assets/desarrollo-web-programacion.png" alt="Desarrollo web y programación en Visual Studio Code"></div>
+                    <div class="card-content">
+                        <span class="card-index">04</span>
+                        <h3>Desarrollo web<br>y programación</h3>
+                        <ul>
+                            <li>HTML, CSS y JavaScript.</li>
+                            <li>Python.</li>
+                            <li>React y Vite.</li>
+                            <li>SQL y automatización.</li>
+                        </ul>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="brand-strip">
+                <p class="brand-strip-title">Empresas y entornos profesionales</p>
+                <div class="brand-logos">
+                    <div class="brand-logo"><img src="assets/logo-green-electronics.png" alt="Green Electronics"><span>Green Electronics</span></div>
+                    <div class="brand-logo"><img src="assets/logo-hyc.png" alt="Transportes H&C Asociados"><span>Transportes H&C Asociados</span></div>
+                    <div class="brand-logo"><img src="assets/logo-claro.png" alt="Claro"><span>Claro</span></div>
+                    <div class="brand-logo"><img src="assets/logo-jbg-operator.png" alt="JBG Operator"><span>JBG Operator</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section class="section projects-section" id="proyectos">
+            <div class="section-heading">
+                <span class="section-number">03</span>
+
+                <div>
+                    <p class="eyebrow">TRABAJOS SELECCIONADOS</p>
+                    <h2>Proyectos</h2>
+                </div>
+
+                <p class="heading-description">
+                    Ideas convertidas en soluciones reales.
+                </p>
+            </div>
+
+            <div class="projects-layout">
+
+                <article class="featured-project project-trigger" data-project="sisoft" tabindex="0" role="button" aria-label="Ver detalles de SISOFT">
+                    <div class="project-preview project-preview-image">
+                        <span class="preview-tag">SISTEMA INTERNO</span>
+                        <img src="assets/sisoft-interfaz.png" alt="Interfaz de SISOFT - prueba de alcoholemia" class="project-preview-real-image">
+                    </div>
+
+                    <div class="project-info">
+                        <span class="project-type">Sistema de gestión</span>
+                        <h3>SISOFT</h3>
+                        <p>
+                            Sistema de gestión SSOMA con formularios,
+                            base de datos y panel de administración.
+                        </p>
+
+                        <div class="tech-tags">
+                            <span>Python</span>
+                            <span>FastAPI</span>
+                            <span>PostgreSQL</span>
+                            <span>React</span>
+                        </div>
+                    </div>
+                </article>
+
+                <div class="project-list">
+
+                    <article class="project-item project-trigger" data-project="bitacora" tabindex="0" role="button" aria-label="Ver detalles de BITÁCORA">
+                        <div class="project-thumbnail bitacora-thumb"></div>
+                        <div>
+                            <span>Dashboard</span>
+                            <h3>BITÁCORA</h3>
+                            <p>Visualización y análisis de rutas.</p>
+                            <div class="tech-tags">
+                                <span>Python</span>
+                                <span>Streamlit</span>
+                            </div>
+                        </div>
+                        <span class="project-arrow">↗</span>
+                    </article>
+
+                    <article class="project-item project-trigger" data-project="suge" tabindex="0" role="button" aria-label="Ver detalles de SUGE">
+                        <div class="project-thumbnail suge-thumb"></div>
+                        <div>
+                            <span>Sistema operativo</span>
+                            <h3>SUGE</h3>
+                            <p>Gestión de guías y control de transporte.</p>
+                            <div class="tech-tags">
+                                <span>React</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                        <span class="project-arrow">↗</span>
+                    </article>
+
+                    <article class="project-item project-trigger" data-project="web" tabindex="0" role="button" aria-label="Ver detalles de páginas web">
+                        <div class="project-thumbnail web-thumb"></div>
+                        <div>
+                            <span>Desarrollo frontend</span>
+                            <h3>Páginas web</h3>
+                            <p>Sitios web para negocios y proyectos.</p>
+                            <div class="tech-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                        <span class="project-arrow">↗</span>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECT MODAL -->
+        <div class="project-modal" id="projectModal" aria-hidden="true">
+            <div class="project-modal-backdrop" data-close-project></div>
+            <div class="project-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="projectModalTitle">
+                <button class="project-modal-close" id="projectModalClose" type="button" aria-label="Cerrar proyecto">×</button>
+
+                <div class="project-modal-header">
+                    <div>
+                        <span class="project-modal-type" id="projectModalType">Proyecto</span>
+                        <h3 id="projectModalTitle">SISOFT</h3>
+                    </div>
+                    <span class="project-modal-lock">Código fuente protegido</span>
+                </div>
+
+                <div class="project-modal-body">
+                    <div class="project-modal-overview">
+                        <p id="projectModalDescription"></p>
+                        <div class="project-modal-tags" id="projectModalTags"></div>
+                        <div class="project-modal-screenshot" id="projectModalScreenshot" hidden>
+                            <figure>
+                                <img id="projectModalScreenshotImage" src="" alt="Vista previa del proyecto seleccionado" loading="lazy">
+                                <figcaption id="projectModalScreenshotCaption"></figcaption>
+                            </figure>
+                        </div>
+                    </div>
+
+                    <div class="project-modal-grid">
+                        <div>
+                            <span class="modal-label">El problema</span>
+                            <p id="projectModalProblem"></p>
+                        </div>
+                        <div>
+                            <span class="modal-label">Mi solución</span>
+                            <p id="projectModalSolution"></p>
+                        </div>
+                    </div>
+
+                    <div class="project-modal-features">
+                        <span class="modal-label">Camino que tomamos</span>
+                        <ul id="projectModalFeatures"></ul>
+                    </div>
+
+                    <div class="project-modal-actions">
+                        <button class="button button-primary" id="projectModalRequest" type="button">
+                            Solicitar acceso al código <span>↗</span>
+                        </button>
+                        <button class="button button-outline" id="projectModalCloseSecondary" type="button">
+                            Cerrar detalles <span>×</span>
+                        </button>
+                    </div>
+
+                    <p class="project-modal-note">
+                        El repositorio completo permanece privado para proteger la propiedad intelectual.
+                        Puedo compartir una revisión técnica del código con reclutadores o equipos interesados.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SKILLS -->
+        <section class="section skills-section" id="habilidades">
+            <div class="section-heading">
+                <span class="section-number">04</span>
+
+                <div>
+                    <p class="eyebrow">HERRAMIENTAS Y CONOCIMIENTOS</p>
+                    <h2>Habilidades</h2>
+                </div>
+
+                <p class="heading-description">
+                    Tecnologías y herramientas que aplico en mi trabajo.
+                </p>
+            </div>
+
+            <div class="skills-grid">
+
+                <article class="skill-card">
+                    <span class="skill-icon">⌁</span>
+                    <h3>Telecomunicaciones</h3>
+                    <ul>
+                        <li>OTDR</li>
+                        <li>VFL</li>
+                        <li>Medidor de potencia óptica</li>
+                        <li>Medidor de pase de luz</li>
+                        <li>Cortadora de fibra</li>
+                        <li>Medición de carretes PKP</li>
+                    </ul>
+                </article>
+
+                <article class="skill-card">
+                    <span class="skill-icon">⌘</span>
+                    <h3>Redes y dispositivos</h3>
+                    <ul>
+                        <li>Módems HFC</li>
+                        <li>Cable módems</li>
+                        <li>Decodificadores</li>
+                        <li>Configuración de equipos</li>
+                        <li>Diagnóstico de conectividad</li>
+                        <li>Actualización de dispositivos</li>
+                    </ul>
+                </article>
+
+                <article class="skill-card">
+                    <span class="skill-icon">&lt;/&gt;</span>
+                    <h3>Desarrollo y programación</h3>
+                    <ul>
+                        <li>HTML y CSS</li>
+                        <li>JavaScript</li>
+                        <li>Python</li>
+                        <li>React y Vite</li>
+                        <li>FastAPI</li>
+                        <li>SQL / PostgreSQL</li>
+                    </ul>
+                </article>
+
+                <article class="skill-card">
+                    <span class="skill-icon">✦</span>
+                    <h3>Otras herramientas</h3>
+                    <ul>
+                        <li>Git y GitHub</li>
+                        <li>Excel</li>
+                        <li>Streamlit</li>
+                        <li>Figma</li>
+                        <li>Automatización</li>
+                        <li>Documentación técnica</li>
+                    </ul>
+                </article>
+
+            </div>
+
+            <!-- BACKEND & API REST — DEMOSTRACIÓN TÉCNICA -->
+            <article class="backend-demo-card">
+                <div class="backend-demo-copy">
+                    <span class="skill-icon backend-demo-icon">{ }</span>
+                    <p class="backend-demo-kicker">DEMOSTRACIÓN TÉCNICA INTERACTIVA</p>
+                    <h3>Backend &amp; API REST</h3>
+                    <p>Explora cómo entiendo la comunicación entre aplicaciones y algunos conceptos que forman parte de mi aprendizaje en desarrollo backend.</p>
+                    <div class="backend-demo-tags" aria-label="Tecnologías y conceptos">
+                        <span>Node.js</span><span>REST</span><span>JWT</span><span>CORS</span><span>HTTPS</span><span>SQL</span>
+                    </div>
+                    <button class="button backend-demo-trigger" id="backendDemoTrigger" type="button">
+                        Explorar <span>→</span>
+                    </button>
+                </div>
+                <div class="backend-demo-preview" aria-hidden="true">
+                    <div class="backend-preview-top"><span></span><span></span><span></span><small>API / security</small></div>
+                    <div class="backend-preview-code"><i>GET</i> <b>/api/users</b><br><span>Authorization:</span> Bearer ••••••••<br><em>200 OK</em> &nbsp; { users: [...] }</div>
+                    <div class="backend-preview-flow"><span>CLIENTE</span><b>→</b><span>API</span><b>→</b><span>SQL</span></div>
+                </div>
+            </article>
+        </section>
+
+        <!-- BACKEND DEMO MODAL -->
+        <div class="backend-demo-modal" id="backendDemoModal" aria-hidden="true">
+            <div class="backend-demo-backdrop" data-close-backend-demo></div>
+            <div class="backend-demo-dialog" role="dialog" aria-modal="true" aria-labelledby="backendDemoTitle">
+                <button class="backend-demo-close" id="backendDemoClose" type="button" aria-label="Cerrar demostración">×</button>
+
+                <div class="backend-demo-header">
+                    <div>
+                        <span class="modal-label">DEMOSTRACIÓN TÉCNICA INTERACTIVA</span>
+                        <h3 id="backendDemoTitle">Backend &amp; API REST</h3>
+                        <p>Una muestra visual de cómo relaciono API REST, autenticación, seguridad y bases de datos.</p>
+                    </div>
+                    <span class="backend-demo-note">Ejemplos conceptuales · no corresponden a un sistema productivo.</span>
+                </div>
+
+                <div class="backend-tabs" role="tablist" aria-label="Conceptos backend">
+                    <button class="backend-tab is-active" type="button" role="tab" aria-selected="true" data-backend-tab="node">Node.js</button>
+                    <button class="backend-tab" type="button" role="tab" aria-selected="false" data-backend-tab="jwt">JWT</button>
+                    <button class="backend-tab" type="button" role="tab" aria-selected="false" data-backend-tab="cors">CORS</button>
+                    <button class="backend-tab" type="button" role="tab" aria-selected="false" data-backend-tab="https">HTTPS</button>
+                    <button class="backend-tab" type="button" role="tab" aria-selected="false" data-backend-tab="sql">SQL</button>
+                </div>
+
+                <div class="backend-demo-stage">
+                    <div class="backend-code-panel">
+                        <div class="backend-code-toolbar"><span>concept-demo</span><button id="backendReplay" type="button">↻ Reproducir</button></div>
+                        <pre class="backend-code" id="backendCode" aria-live="polite"></pre>
+                    </div>
+                    <div class="backend-explanation">
+                        <span class="backend-explanation-label" id="backendExplanationLabel">NODE.JS · REST</span>
+                        <h4 id="backendExplanationTitle">Comunicación entre frontend y backend</h4>
+                        <p id="backendExplanationText">Una API REST expone endpoints que permiten que una aplicación cliente solicite o envíe información al servidor.</p>
+                    </div>
+                </div>
+
+                <div class="backend-flow" id="backendFlow" hidden>
+                    <span>CLIENTE</span><b>→</b><span>HTTPS / TLS</span><b>→</b><span>NODE.JS API</span><b>→</b><span>SQL</span><b>→</b><span>BASE DE DATOS</span>
+                </div>
+
+                <div class="backend-demo-footer">
+                    <p>La intención es mostrar mi forma de razonar sobre una arquitectura web, no presentar estos fragmentos como código de producción.</p>
+                    <button class="button button-outline backend-demo-close-secondary" id="backendDemoCloseSecondary" type="button">Cerrar demostración <span>×</span></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- EDUCATION -->
+        <section class="section education-section" id="educacion">
+            <div class="section-heading">
+                <span class="section-number">05</span>
+
+                <div>
+                    <p class="eyebrow">FORMACIÓN CONTINUA</p>
+                    <h2>Educación</h2>
+                </div>
+
+                <p class="heading-description">
+                    Formación que complementa mi experiencia práctica.
+                </p>
+            </div>
+
+            <div class="education-list">
+
+                <article class="education-card">
+                    <div class="education-icon">⌘</div>
+
+                    <div class="education-details">
+                        <span class="education-status">EN CURSO</span>
+                        <h3>Computación e Informática</h3>
+                        <p class="institution">Cibertec</p>
+                        <p>
+                            Formación orientada al desarrollo de software,
+                            programación, bases de datos y tecnologías digitales.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="education-card">
+                    <div class="education-icon">UTP</div>
+
+                    <div class="education-details">
+                        <span class="education-status status-completed">ESTUDIOS INCONCLUSOS</span>
+                        <h3>Ingeniería en Informática</h3>
+                        <p class="institution">Universidad Tecnológica del Perú — UTP</p>
+                        <p>
+                            Estudios universitarios realizados y actualmente
+                            paralizados.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="education-card">
+                    <div class="education-icon">BR</div>
+
+                    <div class="education-details">
+                        <span class="education-status">NIVEL AVANZADO</span>
+                        <h3>Inglés</h3>
+                        <p class="institution">Instituto Cultural Peruano Británico</p>
+                        <p>
+                            Formación de inglés culminada hasta el nivel avanzado.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="brand-strip education-brands">
+                <p class="brand-strip-title">Instituciones de formación</p>
+                <div class="brand-logos">
+                    <div class="brand-logo"><img src="assets/logo-cibertec.png" alt="Cibertec"><span>Cibertec</span></div>
+                    <div class="brand-logo"><img src="assets/logo-utp.png" alt="Universidad Tecnológica del Perú"><span>Universidad Tecnológica del Perú</span></div>
+                    <div class="brand-logo"><img src="assets/logo-britanico.png" alt="Británico"><span>Británico</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="section contact-section" id="contacto">
+            <span class="section-number">06</span>
+
+            <div class="contact-content">
+                <p class="eyebrow">¿HABLAMOS?</p>
+                <h2>Conectemos ideas<br>y construyamos soluciones.</h2>
+                <p>
+                    Estoy abierta a nuevas oportunidades, proyectos
+                    y colaboraciones donde pueda aportar mi experiencia.
+                </p>
+
+                <div class="contact-actions">
+                    <button class="button button-outline contact-about-trigger" id="contactAboutTrigger" type="button">
+                        Conóceme
+                        <span>↗</span>
+                    </button>
+
+                    <a href="https://wa.me/51916092230?text=Hola%20Celymar%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conversar%20contigo." class="button button-primary" target="_blank" rel="noopener noreferrer">
+                        Envíame un mensaje
+                        <span>↗</span>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/celymar-catamo-santana/" class="button button-outline linkedin-button" target="_blank" rel="noopener noreferrer" aria-label="Visitar perfil de LinkedIn de Celymar Catamo">
+                        LinkedIn
+                        <span>↗</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="contact-decoration">
+                <span>+</span>
+                <span>+</span>
+                <span>+</span>
+            </div>
+        </section>
+
+        <!-- ABOUT / CONÓCEME — HISTORIA INTERACTIVA -->
+        <div class="about-modal" id="aboutModal" aria-hidden="true">
+            <div class="about-modal-backdrop" data-close-about></div>
+            <div class="about-modal-dialog about-story-dialog" role="dialog" aria-modal="true" aria-labelledby="aboutModalTitle">
+                <button class="about-modal-close" id="aboutModalClose" type="button" aria-label="Cerrar presentación">×</button>
+
+                <div class="about-story-intro">
+                    <div class="about-story-copy">
+                        <span class="modal-label">CONÓCEME · MI HISTORIA</span>
+                        <h3 id="aboutModalTitle">No llegué hasta aquí por un camino corto.</h3>
+                        <p id="aboutStoryIntroText">Hay una parte de mi historia que no aparece en un currículum: el recorrido que me trajo hasta aquí y por qué la tecnología terminó convirtiéndose en mi norte.</p>
+                    </div>
+                    <div class="about-story-cover">
+                        <img src="assets/about-cover.jpeg" alt="Celymar en una sesión fotográfica profesional">
+                        <span>Una historia que todavía estoy construyendo.</span>
+                    </div>
+                </div>
+
+                <div class="about-story-navigation" role="tablist" aria-label="Capítulos de mi historia">
+                    <button class="about-story-tab is-active" type="button" role="tab" aria-selected="true" data-story-step="0">
+                        <span>01</span><strong>El comienzo</strong>
+                    </button>
+                    <button class="about-story-tab" type="button" role="tab" aria-selected="false" data-story-step="1">
+                        <span>02</span><strong>Los retos</strong>
+                    </button>
+                    <button class="about-story-tab" type="button" role="tab" aria-selected="false" data-story-step="2">
+                        <span>03</span><strong>Mi norte</strong>
+                    </button>
+                    <button class="about-story-tab" type="button" role="tab" aria-selected="false" data-story-step="3">
+                        <span>04</span><strong>Hoy</strong>
+                    </button>
+                </div>
+
+                <div class="about-story-stage" aria-live="polite">
+                    <div class="about-story-photo-wrap">
+                        <div class="about-story-photo-loader" id="aboutStoryPhotoLoader"></div>
+                        <img id="aboutStoryPhoto" class="about-story-photo" src="assets/about-journey.jpeg" alt="Celymar durante una etapa de su recorrido">
+                        <div class="about-story-photo-caption" id="aboutStoryPhotoCaption">El camino también forma parte de la historia.</div>
+                    </div>
+
+                    <div class="about-story-text">
+                        <span class="about-story-kicker" id="aboutStoryKicker">01 · EL COMIENZO</span>
+                        <h4 id="aboutStoryTitle">Venezuela fue el punto de partida.</h4>
+                        <p id="aboutStoryText">Soy venezolana y llevo alrededor de diez años viviendo en Perú. Llegar hasta donde estoy hoy ha significado adaptarme, comenzar etapas nuevas y seguir avanzando incluso cuando el camino se sentía largo y agotador.</p>
+                        <div class="about-story-quote" id="aboutStoryQuote">“Cada etapa me fue acercando a quien quiero ser.”</div>
+                        <div class="about-story-tags" id="aboutStoryTags">
+                            <span>Venezuela</span><span>Perú</span><span>Un nuevo comienzo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-story-footer">
+                    <button class="button button-outline" id="aboutStoryPrev" type="button">← Anterior</button>
+                    <div class="about-story-progress" aria-hidden="true"><span id="aboutStoryProgress"></span></div>
+                    <button class="button button-primary" id="aboutStoryNext" type="button">Continuar →</button>
+                </div>
+
+                <div class="about-story-final" id="aboutStoryFinal" aria-hidden="true">
+                    <p class="modal-label">Y AHORA, ¿HABLAMOS?</p>
+                    <p>Gracias por llegar hasta aquí. Si mi historia y mis proyectos conectan contigo, me encantaría conocer tu proyecto y conversar sobre cómo puedo aportar.</p>
+                    <div class="about-modal-actions">
+                        <a href="https://wa.me/51916092230?text=Hola%20Celymar%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conversar%20contigo." class="button button-primary" target="_blank" rel="noopener noreferrer">
+                            Envíame un mensaje
+                            <span>↗</span>
+                        </a>
+                        <button class="button button-outline" id="aboutModalCloseSecondary" type="button">
+                            Seguir viendo mi portafolio
+                            <span>×</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <p>© <span id="currentYear"></span> Celymar Catamo. Todos los derechos reservados.</p>
+        <p>Designed & developed with curiosity.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
