@@ -3496,3 +3496,274 @@ body.backend-demo-open { overflow: hidden; }
         transform: none;
     }
 }
+
+/* =========================================================
+   MOBILE POLISH V3
+   These rules only affect screens up to 760px.
+   Desktop/tablet landscape styling remains unchanged.
+========================================================= */
+@media (max-width: 760px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .section {
+        width: 100%;
+        padding: 72px 16px;
+    }
+
+    .section-heading {
+        margin-bottom: 34px;
+    }
+
+    .section-heading h2 {
+        font-size: clamp(2.35rem, 9vw, 3.2rem);
+        line-height: 1;
+    }
+
+    .heading-description {
+        max-width: 31ch;
+        font-size: .76rem;
+        line-height: 1.65;
+    }
+
+    /* EXPERIENCIA: tarjetas separadas, centradas y con aire lateral */
+    .experience-section {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .experience-grid {
+        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 34px;
+    }
+
+    .experience-card {
+        width: min(100%, 390px);
+        margin: 0 auto;
+        border-radius: 20px;
+        border-color: rgba(23, 33, 38, .18);
+        background: rgba(255,255,255,.52);
+        box-shadow: 0 10px 30px rgba(23,33,38,.055);
+    }
+
+    .experience-card + .experience-card {
+        margin-top: 0;
+    }
+
+    .card-image {
+        height: 150px;
+    }
+
+    .card-content,
+    .professional-role-card .card-content {
+        padding: 22px 21px 24px;
+    }
+
+    .card-content h3,
+    .professional-role-card h3 {
+        font-size: 1.5rem;
+        line-height: 1.08;
+        margin: 9px 0 18px;
+    }
+
+    .card-content li {
+        font-size: .74rem;
+        line-height: 1.58;
+        margin-bottom: 8px;
+    }
+
+    .brand-strip {
+        width: min(100%, 390px);
+        margin: 48px auto 0;
+    }
+
+    .brand-logos {
+        gap: 12px;
+    }
+
+    .brand-logo {
+        min-height: 82px;
+        border-radius: 16px;
+    }
+
+    /* PROYECTOS: mantener cada pieza como bloque independiente */
+    .projects-section {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .projects-layout {
+        width: 100%;
+        gap: 22px;
+    }
+
+    .featured-project,
+    .project-list {
+        width: min(100%, 390px);
+        margin: 0 auto;
+    }
+
+    .featured-project {
+        border-radius: 20px;
+    }
+
+    .project-list {
+        gap: 14px;
+    }
+
+    .project-item {
+        border-radius: 18px;
+        padding: 15px;
+    }
+
+    /* HABILIDADES */
+    .skills-section {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .skills-grid {
+        width: 100%;
+        gap: 18px;
+    }
+
+    .skill-card,
+    .backend-demo-card {
+        width: min(100%, 390px);
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 18px;
+    }
+
+    .skill-card {
+        padding: 22px;
+    }
+
+    .backend-demo-card {
+        padding: 20px;
+    }
+
+    /* EDUCACIÓN */
+    .education-section {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .education-list {
+        width: 100%;
+        gap: 18px;
+    }
+
+    .education-card {
+        width: min(100%, 390px);
+        margin: 0 auto;
+        border-radius: 18px;
+        padding: 22px;
+    }
+
+    /* CONTACTO */
+    .contact-section {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .contact-content {
+        width: min(100%, 390px);
+        margin: 0 auto;
+    }
+
+    .contact-content h2 {
+        font-size: clamp(2.8rem, 13vw, 4.2rem);
+        line-height: .98;
+    }
+
+    .contact-actions {
+        gap: 10px;
+    }
+
+    .contact-actions .button {
+        min-height: 48px;
+    }
+}
+
+@media (max-width: 420px) {
+    .section {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .section-heading {
+        margin-bottom: 30px;
+    }
+
+    .experience-section,
+    .projects-section,
+    .skills-section,
+    .education-section,
+    .contact-section {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .experience-grid {
+        gap: 32px;
+    }
+
+    .experience-card,
+    .featured-project,
+    .project-list,
+    .skill-card,
+    .backend-demo-card,
+    .education-card,
+    .contact-content,
+    .brand-strip {
+        width: min(100%, 350px);
+    }
+
+    .experience-card {
+        border-radius: 18px;
+    }
+
+    .card-image {
+        height: 142px;
+    }
+
+    .card-content,
+    .professional-role-card .card-content {
+        padding: 20px 19px 22px;
+    }
+
+    .card-content h3,
+    .professional-role-card h3 {
+        font-size: 1.42rem;
+        margin-bottom: 16px;
+    }
+
+    .card-content li {
+        font-size: .72rem;
+        line-height: 1.55;
+    }
+
+    .project-item {
+        grid-template-columns: 54px minmax(0, 1fr) auto;
+        gap: 11px;
+        padding: 13px;
+    }
+
+    .project-thumbnail {
+        width: 54px;
+        height: 54px;
+    }
+
+    .skill-card,
+    .backend-demo-card,
+    .education-card {
+        padding: 19px;
+    }
+
+    .contact-content h2 {
+        font-size: 3rem;
+    }
+}
